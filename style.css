@@ -113,3 +113,8 @@ footer a { color: var(--dim); }
   header.top { flex-wrap: wrap; row-gap: 6px; }
   nav a:first-child { margin-left: 0; }
 }
+.join-shots { margin: 4px 0 24px; justify-content: flex-start; }
+.join-shots img { max-width: 220px; }
+.join-shots a { width: 31%; max-width: 220px; }
+.join-shots a img { width: 100%; max-width: none; display: block; }
+.shots-note { margin: -16px 0 20px; }

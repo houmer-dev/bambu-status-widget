@@ -16,7 +16,7 @@
 
     <main class="doc">
       <h1>Privacy policy</h1>
-      <p class="note">Effective 5 November 2026 · App: Bambu Status Widget (Android, package <code>app.bambuwidget</code>) · Developer: Jan Legát</p>
+      <p class="note">Effective 8 November 2026 · App: Bambu Status Widget (Android, package <code>app.bambuwidget</code>) · Developer: Jan Legát</p>
 
       <h2>In short</h2>
       <p>Bambu Status Widget has no ads, no analytics and no server of its own. It sends data only to Bambu Lab's servers (to sign you in and read your printer's status) and, if you set it up, directly to your printer on your home network. I, the developer, never receive any of your data.</p>
@@ -26,6 +26,7 @@
         <tr><th>Data</th><th>Why</th><th>Where it goes</th><th>Stored</th></tr>
         <tr><td>Bambu Lab account e-mail</td><td>To sign in to your Bambu Lab account</td><td>Bambu Lab sign-in service</td><td>On your phone (to pre-fill the sign-in)</td></tr>
         <tr><td>Password or e-mail code</td><td>To sign in</td><td>Bambu Lab sign-in service</td><td><b>Never stored</b></td></tr>
+        <tr><td>Sign-in on Bambu Lab's own page (only if Bambu Lab asks for a robot check)</td><td>To sign in when the normal sign-in is blocked</td><td>Bambu Lab's website, opened inside the app; you type your password there, not into the app</td><td>The app keeps only the access token; the page's cookies are deleted right after sign-in</td></tr>
         <tr><td>Access token from Bambu Lab</td><td>To read your printer's status</td><td>Bambu Lab servers</td><td>On your phone until you sign out (it expires after about 3 months)</td></tr>
         <tr><td>Printer name and serial number</td><td>To know which printer to show</td><td>Bambu Lab servers</td><td>On your phone</td></tr>
         <tr><td>Printer IP address, access code and the fingerprint of the printer's certificate (optional home Wi-Fi backup)</td><td>To reach the printer directly</td><td>Your printer only</td><td>On your phone</td></tr>
@@ -33,7 +34,7 @@
       </table>
 
       <h2>Security</h2>
-      <p>All connections are encrypted: HTTPS for sign-in and MQTT over TLS for the printer status. The home Wi-Fi backup remembers your printer's certificate and refuses any other device. Data stored on the phone is in the app's private storage, which other apps can't read. From version 1.0.3 the sign-in token and the printer access code are also encrypted with a key that never leaves the phone, and the app's data is left out of Android backups and phone-to-phone transfers.</p>
+      <p>All connections are encrypted: HTTPS for sign-in and MQTT over TLS for the printer status. The home Wi-Fi backup remembers your printer's certificate and refuses any other device. Data stored on the phone is in the app's private storage, which other apps can't read. From version 1.0.3 the sign-in token and the printer access code are also encrypted with a key that never leaves the phone, and the app's data is left out of Android backups and phone-to-phone transfers. From version 1.0.4, if Bambu Lab asks for a robot check, you can sign in on Bambu Lab's own page inside the app: your password goes only to Bambu Lab, the app reads only the access token the page hands out after you sign in, and it then clears the page's cookies.</p>
 
       <h2>Sharing</h2>
       <p>Nothing is sold or shared with anyone. Bambu Lab receives only what is needed to sign you in and send your printer's status, and handles it under <a href="https://bambulab.com/en/policies/privacy">Bambu Lab's own privacy policy</a>. The widget connects to Bambu Lab the same unofficial way as other community tools; if Bambu Lab changes it, an app update may be needed.</p>

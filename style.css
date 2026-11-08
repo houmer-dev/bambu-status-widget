@@ -139,3 +139,12 @@ footer a { color: var(--dim); }
 .join-shots a { width: 31%; max-width: 220px; }
 .join-shots a img { width: 100%; max-width: none; display: block; }
 .shots-note { margin: -16px 0 20px; }
+
+/* FAQ: questions that open on tap */
+.faq { display: grid; gap: 10px; }
+.faq details { background: var(--card); border-radius: 14px; padding: 4px 18px; }
+.faq summary { cursor: pointer; font-weight: 600; padding: 12px 0; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--green-soft); font-size: 22px; line-height: 1; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { margin: 0 0 14px; color: var(--dim); }

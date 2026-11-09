@@ -44,7 +44,7 @@ nav a { color: var(--dim); text-decoration: none; margin-left: 20px; font-size: 
 nav a:hover { color: var(--text); }
 
 .hero {
-  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center;
+  display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 32px; align-items: center;
   padding: 48px 0 64px;
 }
 .hero h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.1; margin: 0 0 16px; }
@@ -58,9 +58,9 @@ nav a:hover { color: var(--text); }
 .btn.ghost { background: transparent; color: var(--text); border: 1px solid #4a4a4a; }
 .note { font-size: 13px; color: var(--dim); margin-top: 14px; }
 
-.shots { display: flex; gap: 12px; justify-content: center; }
+.shots { display: flex; gap: 10px; justify-content: center; }
 .shots img {
-  width: 31%; max-width: 190px; min-width: 0; border-radius: 18px;
+  width: 23.5%; max-width: 180px; min-width: 0; border-radius: 18px;
   border: 1px solid var(--line);
 }
 
@@ -102,6 +102,9 @@ footer a { color: var(--dim); }
 
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; padding-top: 24px; }
+  /* Four screenshots: two by two, so they stay readable on a phone */
+  .shots { flex-wrap: wrap; }
+  .shots img { width: 47%; max-width: 220px; }
   .grid { grid-template-columns: 1fr; }
   .about { grid-template-columns: 1fr; }
   nav a { margin-left: 12px; font-size: 14px; }
@@ -136,9 +139,10 @@ footer a { color: var(--dim); }
 }
 .join-shots { margin: 4px 0 24px; justify-content: flex-start; }
 .join-shots img { max-width: 220px; }
-.join-shots a { width: 31%; max-width: 220px; }
+.join-shots a { width: 23.5%; max-width: 190px; }
 .join-shots a img { width: 100%; max-width: none; display: block; }
 .shots-note { margin: -16px 0 20px; }
+@media (max-width: 760px) { .join-shots a { width: 47%; max-width: 220px; } }
 
 /* FAQ: questions that open on tap */
 .faq { display: grid; gap: 10px; }

@@ -152,3 +152,11 @@ footer a { color: var(--dim); }
 .faq summary::after { content: "+"; color: var(--green-soft); font-size: 22px; line-height: 1; }
 .faq details[open] summary::after { content: "−"; }
 .faq details p { margin: 0 0 14px; color: var(--dim); }
+
+/* Version history page */
+.doc p.sub { color: var(--dim); margin: 0 0 28px; }
+.versions { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 14px; }
+.versions > li { background: var(--card); border-radius: 16px; padding: 18px 22px 8px; }
+.versions h2 { margin: 0 0 8px; font-size: 21px; }
+.versions h2 span { margin-left: 10px; font-size: 14px; font-weight: 400; color: var(--dim); }
+.versions ul { margin: 0 0 12px; padding-left: 20px; color: var(--dim); font-size: 15px; }

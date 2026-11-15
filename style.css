@@ -152,3 +152,6 @@ footer a { color: var(--dim); }
 .faq summary::after { content: "+"; color: var(--green-soft); font-size: 22px; line-height: 1; }
 .faq details[open] summary::after { content: "−"; }
 .faq details p { margin: 0 0 14px; color: var(--dim); }
+
+/* 1.0.8: the live notification card spans the grid */
+.card.wide { grid-column: 1 / -1; box-shadow: inset 0 0 0 1px var(--green); }

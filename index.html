@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bambu Status Widget | Android widget for Bambu Lab printers</title>
-  <meta name="description" content="See your Bambu Lab print, filaments and AMS humidity on your Android home screen.">
+  <meta name="description" content="Follow your Bambu Lab print live on your Android lock screen and home screen: time left, progress, filaments and AMS humidity.">
   <link rel="icon" href="assets/icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -26,8 +26,8 @@
 
     <div class="hero">
       <div>
-        <h1>Your 3D print<br><span>on your home screen</span></h1>
-        <p class="lead">An Android widget for Bambu Lab printers. See the time left, progress and loaded filaments without opening an app.</p>
+        <h1>Your 3D print<br><span>live on your phone</span></h1>
+        <p class="lead">A live notification and home screen widgets for Bambu Lab printers. See the time left, progress and loaded filaments on your lock screen, without opening an app.</p>
         <div class="badge-row">
           <!-- During the closed test: the join page. Once the app is public: the Play Store link -->
           <a class="btn" href="join.html">Join the test</a>
@@ -36,10 +36,11 @@
         <p class="note">Free, no ads. Android 12 or newer. Now in testing on Google Play.</p>
       </div>
       <div class="shots">
-        <img src="assets/screen-1.png" alt="Round widget with a progress ring, time left and filament dots, and a rectangle widget with AMS slots and humidity">
-        <img src="assets/screen-3.png" alt="Multiple printers widget with six printers, and a smaller one with two">
-        <img src="assets/screen-4.png" alt="Daylight rectangle widget, Neon round widget and a paused strip in Sand">
-        <img src="assets/screen-5.png" alt="Round widget and strip in the Material theme with the phone's own colours, and a finished print in Candy">
+        <img src="assets/screen-1.png" alt="Lock screen with a Live Update: time left, percent, printer and job name, and a progress bar; the percent also shows in the status bar">
+        <img src="assets/screen-2.png" alt="Live Update on an Android 16 Pixel lock screen, and the percent in the status bar">
+        <img src="assets/screen-3.png" alt="The notification on a lock screen, and the notification shade with a line for each printing printer">
+        <img src="assets/screen-4.png" alt="Round widget with a progress ring, time left and filament dots, and a rectangle widget with AMS slots and humidity">
+        <img src="assets/screen-7.png" alt="Daylight rectangle widget, Neon round widget and a paused strip in Liquid">
       </div>
     </div>
   </div>
@@ -49,13 +50,14 @@
       <h2>What it shows</h2>
       <p class="sub">You choose what each widget shows.</p>
       <div class="grid">
+        <div class="card wide"><h3><span class="dot" style="background:var(--green)"></span>Live notification</h3><p>Time left and progress on your lock screen and in the notification shade while a print runs, until a few minutes after it ends. On Android 16 it's a Live Update with the progress in the status bar. Each printer gets its own line. Works without any widget, and you can switch it off.</p></div>
         <div class="card"><h3><span class="dot" style="background:var(--green)"></span>Progress</h3><p>A ring or bar that fills as the print goes. Paused, failed and offline stand out by colour and shape.</p></div>
         <div class="card"><h3><span class="dot" style="background:var(--blue)"></span>Time</h3><p>Time left and the time the print will finish.</p></div>
         <div class="card"><h3><span class="dot" style="background:#f72323"></span>Filaments</h3><p>All spools in the AMS and on the external holder. The one in use is marked.</p></div>
         <div class="card"><h3><span class="dot" style="background:var(--orange)"></span>Temperatures</h3><p>Nozzle and bed temperature and the speed mode.</p></div>
         <div class="card"><h3><span class="dot" style="background:var(--cyan)"></span>AMS humidity</h3><p>See when your filament is getting damp.</p></div>
         <div class="card"><h3><span class="dot" style="background:#8a8a8a"></span>Idle</h3><p>Shows whether the last print finished or failed.</p></div>
-        <div class="card"><h3><span class="dot" style="background:var(--green)"></span>Live updates</h3><p>Every few seconds while the printer heats up, calibrates, changes filament and in the last 10 minutes of a print. Every minute otherwise while your screen is on.</p></div>
+        <div class="card"><h3><span class="dot" style="background:var(--green)"></span>Fast refresh</h3><p>Every few seconds while the printer heats up, calibrates, changes filament and in the last 10 minutes of a print. Every minute otherwise while your screen is on.</p></div>
         <div class="card"><h3><span class="dot" style="background:var(--blue)"></span>Themes</h3><p>Six themes, chosen for each widget. Material takes your phone's colours and follows its dark mode.</p></div>
       </div>
     </div>
@@ -70,7 +72,7 @@
         <li>Sign in with your Bambu Lab account, the same one you use in Bambu Handy. Google and Apple accounts work too.</li>
         <li>Choose a shape and tap <b>Place the widget</b>.</li>
       </ol>
-      <p class="note">Tap the widget to refresh it. Tap the camera icon to open Bambu Handy.</p>
+      <p class="note">Tap the widget to refresh it. Tap the camera icon to open Bambu Handy. The live notification is on from the start once you allow notifications; switch it off in the app's settings under <b>Notification</b>.</p>
     </div>
   </section>
 
@@ -78,6 +80,10 @@
     <div class="wrap">
       <h2>FAQ</h2>
       <div class="faq">
+        <details>
+          <summary>How do I turn on Live Updates?</summary>
+          <p>Live Updates need Android 16 and a phone that shows them. Open the phone's settings, then <b>Notifications</b>, <b>Bambu Status Widget</b>, and allow <b>Live Updates</b> (the name differs a little between phone makers). Other phones get the regular live notification.</p>
+        </details>
         <details>
           <summary>Why doesn't the camera button open the right screen in Bambu Handy?</summary>
           <p>Open the Bambu Handy settings and set <b>Home Page</b> to <b>Devices</b>.</p>
@@ -101,7 +107,7 @@
         </details>
         <details>
           <summary>Will there be more visual styles?</summary>
-          <p>There are six themes now: Classic, Daylight, Material, Sand, Neon and Candy. Material uses your phone's own colours and follows its dark mode.</p>
+          <p>There are six themes now: Classic, Daylight, Material, Liquid, Neon and Candy. Material uses your phone's own colours; Material and Liquid (frosted glass) follow the phone's dark mode.</p>
         </details>
         <details>
           <summary>Will there be an iOS version?</summary>

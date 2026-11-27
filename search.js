@@ -16,7 +16,7 @@
     free: 'free coffee', price: 'free', cost: 'free', iphone: 'ios', apple: 'apple ios', china: 'chinese',
     camera: 'camera handy', refresh: 'refresh update fast', slow: 'late refresh', late: 'late refresh',
     privacy: 'privacy secure password data', data: 'data privacy', delete: 'deleting delete sign', gdpr: 'privacy data', track: 'tracking privacy', tracking: 'tracking privacy', safe: 'secure', security: 'secure certificate', apk: 'apk download test',
-    battery: 'battery refresh', robot: 'robot', captcha: 'robot', '2fa': 'two-step', mfa: 'two-step'
+    samsung: 'samsung now bar', galaxy: 'samsung now bar', oneui: 'samsung now bar', nowbar: 'now bar samsung', battery: 'battery refresh', robot: 'robot', captcha: 'robot', '2fa': 'two-step', mfa: 'two-step'
   };
 
   function slug(t) {

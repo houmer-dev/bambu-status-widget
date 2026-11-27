@@ -76,6 +76,35 @@
     </div>
   </section>
 
+  <section id="garmin">
+    <div class="wrap">
+      <h2>Garmin Companion <span class="tag">Alpha testing</span></h2>
+      <p class="sub">Your print on your Garmin watch: a glance with the time left, and a round screen just like the circle widget.</p>
+      <img class="garmin-shots" src="assets/garmin-screens.png" alt="Three Garmin watch screens: a print at 62 % with 1 h 39 min left and the finish time, a paused print with the reason, and a finished print with its filament dots">
+      <div class="grid">
+        <div class="card"><h3><span class="dot" style="background:var(--green)"></span>How it works</h3><p>The app on your phone sends the print status to the watch through Garmin Connect, whenever something changes. The watch needs no Bambu sign-in of its own.</p></div>
+        <div class="card"><h3><span class="dot" style="background:var(--blue)"></span>What it shows</h3><p>Printer, time left, percent, finish time and the loaded filaments. Paused and failed prints stand out by colour. With several printers, Up and Down switch between them.</p></div>
+        <div class="card"><h3><span class="dot" style="background:#8a8a8a"></span>Always current</h3><p>Between updates the watch counts the time down by itself. If it hasn't heard from your phone for 15 minutes, the numbers turn grey.</p></div>
+      </div>
+      <div class="risk">
+        <b>Alpha test: use at your own risk.</b> This is an early test version for testing purposes only. It may show wrong or outdated numbers, use more battery or stop working, and it can change at any time. It's not in the Connect IQ Store yet, and it's not made or endorsed by Garmin or Bambu Lab.
+      </div>
+      <h3 class="garmin-install">How to try it</h3>
+      <ol class="steps">
+        <li>The watch app gets its data from the phone app, and the version with Garmin support is still in testing too. <b>E-mail me and I'll send you the test version for your phone.</b> Garmin Connect must be on the same phone, paired with your watch.</li>
+        <li>Download the watch app on a computer: <a class="dl" href="assets/garmin/BambuStatus-fr955-alpha.prg" download>BambuStatus-fr955-alpha.prg</a> (Forerunner 955 only, 12 KB).</li>
+        <li>Connect the watch to the computer with its charging cable and copy the file into the <b>GARMIN\Apps</b> folder on the watch. On a Mac you need a tool like OpenMTP to see the watch. Then unplug it.</li>
+        <li>On the watch, open the glances, scroll to the end, choose <b>Edit</b>, then <b>Add</b> and <b>Bambu Status</b>.</li>
+        <li>Open Bambu Status Widget on your phone once. Within a minute your printer appears on the watch. Press Start on the glance for the full screen.</li>
+      </ol>
+      <p class="note">To remove it, delete the file from GARMIN\Apps again. Another Garmin watch? Write to me, more models will follow.</p>
+      <div class="feedback">
+        <span>Feedback, bugs or a photo of it on your wrist:</span>
+        <a href="mailto:houmer.dev@gmail.com?subject=Garmin%20Companion%20alpha">houmer.dev@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
   <section id="sign-in">
     <div class="wrap">
       <h2>Signing in</h2>

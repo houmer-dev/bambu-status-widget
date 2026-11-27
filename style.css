@@ -157,3 +157,15 @@ footer a { color: var(--dim); }
 
 /* 1.0.8: the live notification card spans the grid */
 .card.wide { grid-column: 1 / -1; box-shadow: inset 0 0 0 1px var(--green); }
+
+/* Garmin Companion */
+h2 .tag { display: inline-block; vertical-align: middle; margin-left: 10px; padding: 3px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; letter-spacing: .3px; color: var(--green); box-shadow: inset 0 0 0 1px var(--green); }
+.garmin-shots { display: block; width: 100%; max-width: 640px; height: auto; margin: 8px auto 28px; }
+.garmin-install { margin: 32px 0 14px; font-size: 20px; }
+.risk { margin: 28px 0 0; padding: 14px 18px; border-radius: 12px; background: rgba(255, 170, 0, .08); box-shadow: inset 4px 0 0 var(--orange); color: var(--dim); font-size: 15px; }
+.risk b { color: var(--text); }
+a.dl { font-weight: 600; color: var(--green); overflow-wrap: anywhere; }
+.feedback { margin-top: 22px; padding: 18px 20px; border-radius: 14px; background: var(--card); box-shadow: inset 0 0 0 1px var(--green); display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.feedback span { color: var(--dim); }
+.feedback a { font-size: 20px; font-weight: 700; color: var(--green); text-decoration: none; overflow-wrap: anywhere; }
+.feedback a:hover { text-decoration: underline; }

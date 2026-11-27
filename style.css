@@ -211,3 +211,24 @@ html.search-lock { overflow: hidden; }
   nav a, nav a:first-child { margin-left: 0; }
   .search-btn { margin-left: 0; }
 }
+
+/* Header: the support line sits right under the menu and Search, on its own row */
+.support { width: 100%; justify-content: flex-end; margin-top: -8px; }
+.support span { max-width: none; }
+
+/* Setup steps with a picture: text on the left, picture on the right (stacked on phones) */
+.steps li.has-shot, .steps li:has(img.shot) { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 24px; align-items: start; }
+.steps li:has(img.shot) > img.shot { width: 280px; margin: 0; }
+.steps li:has(.shot-row) .shot-row { width: 470px; }
+.steps li:has(.shot-row) img.shot { margin: 0; }
+@media (max-width: 760px) {
+  .steps li:has(img.shot) { display: block; }
+  .steps li:has(img.shot) > img.shot { width: 100%; margin-top: 14px; }
+  .steps li:has(.shot-row) .shot-row { width: auto; margin-top: 14px; }
+}
+.steps li:has(.shot-row) .shot-row { flex-wrap: nowrap; }
+.steps li:has(.shot-row) .shot-row img.shot { flex: 1 1 0; min-width: 0; max-width: none; }
+@media (max-width: 760px) {
+  .steps li:has(.shot-row) .shot-row { flex-wrap: wrap; }
+  .steps li:has(.shot-row) .shot-row img.shot { flex: 1 1 220px; max-width: 300px; }
+}

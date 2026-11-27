@@ -1,7 +1,8 @@
 // Site search: a button in the header (or "/" / Ctrl+K) opens a box that searches the FAQ, setup steps, features
 // and the Garmin page as you type. Everything runs in the browser; the other page is read once when the box opens.
 (function () {
-  var PAGES = ['index.html', 'garmin.html'];
+  var PAGES = ['index.html', 'garmin.html', 'privacy.html'];
+  var PAGE_NAMES = { 'index.html': 'Main page', 'garmin.html': 'Garmin page', 'privacy.html': 'Privacy policy' };
   // Words people type that the page says differently
   var SYNONYMS = {
     login: 'sign', log: 'sign', signin: 'sign', password: 'password sign', account: 'account sign',
@@ -14,7 +15,7 @@
     theme: 'theme material liquid neon candy', color: 'theme colour', colour: 'theme colour', dark: 'theme dark',
     free: 'free coffee', price: 'free', cost: 'free', iphone: 'ios', apple: 'apple ios', china: 'chinese',
     camera: 'camera handy', refresh: 'refresh update fast', slow: 'late refresh', late: 'late refresh',
-    privacy: 'privacy secure password', safe: 'secure', security: 'secure certificate', apk: 'apk download test',
+    privacy: 'privacy secure password data', data: 'data privacy', delete: 'deleting delete sign', gdpr: 'privacy data', track: 'tracking privacy', tracking: 'tracking privacy', safe: 'secure', security: 'secure certificate', apk: 'apk download test',
     battery: 'battery refresh', robot: 'robot', captcha: 'robot', '2fa': 'two-step', mfa: 'two-step'
   };
 
@@ -48,6 +49,11 @@
       var h = c.querySelector('h3');
       if (h) add(c, h.textContent, c.textContent.replace(h.textContent, ''), 'Feature', sectionOf(c));
     });
+    doc.querySelectorAll('main.doc h2').forEach(function (h) {
+      var text = '', n = h.nextElementSibling;
+      while (n && n.tagName !== 'H2') { text += ' ' + n.textContent; n = n.nextElementSibling; }
+      add(h, h.textContent, text, 'Privacy', 'Privacy policy');
+    });
     doc.querySelectorAll('section[id], main').forEach(function (s) {
       var h = s.querySelector('h1, h2'), p = s.querySelector('p');
       if (h) add(h, clean(h.childNodes[0] ? h.childNodes[0].textContent : h.textContent), p ? p.textContent : '', 'Section', '');
@@ -55,9 +61,9 @@
     return list;
   }
 
+  // Pages outside PAGES (the old join page) search the others but add nothing of their own
   var here = (location.pathname.split('/').pop() || 'index.html');
-  if (PAGES.indexOf(here) < 0) here = 'index.html';
-  var index = entries(document, here);
+  var index = PAGES.indexOf(here) >= 0 ? entries(document, here) : [];
   var loaded = false;
   function loadOthers() {
     if (loaded) return;
@@ -150,7 +156,7 @@
     }
     results.innerHTML = shown.map(function (e, i) {
       return '<a class="search-hit" role="option" href="' + (e.page === here ? '' : e.page) + '#' + e.id + '" data-i="' + i + '">' +
-        '<span class="search-kind">' + e.kind + (e.page !== here ? (e.page === 'garmin.html' ? ' · Garmin page' : ' · Main page') : '') + '</span>' +
+        '<span class="search-kind">' + e.kind + (e.page !== here ? ' · ' + PAGE_NAMES[e.page] : '') + '</span>' +
         '<span class="search-title">' + mark(e.title, groups) + '</span>' +
         '<span class="search-snip">' + snippet(e, groups) + '</span></a>';
     }).join('');

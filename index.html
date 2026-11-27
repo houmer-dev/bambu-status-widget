@@ -145,7 +145,7 @@
         <details>
           <summary>Can I use it without signing in to Bambu Lab?</summary>
           <p>Yes. Open <b>Printer IP and access code</b> in the app and enter your printer's IP address, serial number and access code. You'll find the IP and access code on the printer under <b>Settings → WLAN</b>. Then tap <b>Save backup and test</b>.</p>
-          <p>The widget then updates only when your phone is on the same Wi-Fi as the printer. If you're signed in too, this is a backup for when the cloud can't be reached.</p>
+          <p>The widget then updates only when your phone is on the same Wi-Fi as the printer. If you're signed in too, this is a backup for when the cloud can't be reached. Step by step: <a href="#lan-mode">How do I set up LAN mode?</a></p>
         </details>
         <details>
           <summary>How long do I stay signed in?</summary>
@@ -167,6 +167,18 @@
           <summary>Can I have one widget per printer?</summary>
           <p>Yes. Every widget can show a different printer, so you can put your main printer on one home screen page and another printer on the next. Place a widget, tap the gear on it (or long-press it and choose edit) and tap the printer it should show. Then place a second widget and pick the other printer.</p>
           <p>If you place the widget with <b>Place the widget</b> in the app, it asks which printer right away. To see several printers in one widget, use <b>Multiple printers</b> instead.</p>
+        </details>
+        <details id="lan-mode">
+          <summary>How do I set up LAN mode?</summary>
+          <p>LAN mode connects the widget straight to your printer over your home Wi-Fi, without Bambu Lab's cloud. If you're signed in, it's a backup for when the cloud can't be reached. Without an account, it's the only connection.</p>
+          <ol>
+            <li>On the printer, open <b>Settings → WLAN</b> and note the <b>IP address</b> and the <b>access code</b>.</li>
+            <li>Find the printer's <b>serial number</b> in Bambu Handy or on the printer. If you're signed in, the app fills it in from the printer you picked.</li>
+            <li>In the app, open <b>Printer IP and access code</b> under <b>Backup – home Wi-Fi</b> and enter the IP address, serial number and access code.</li>
+            <li>With your phone on the same Wi-Fi as the printer, tap <b>Save backup and test</b>. When it works, the app shows "Connected" with the printer and its progress.</li>
+          </ol>
+          <p>Without an account, the widget updates only while your phone is on that Wi-Fi. Tip: give the printer a fixed IP address in your router, so it doesn't change after a restart. If you change the printer's access code, enter the new one and test again.</p>
+          <p>The app remembers your printer's certificate and won't send the access code to any other device. If it ever says the certificate changed, check you're on your own Wi-Fi and tap <b>Save backup and test</b> again.</p>
         </details>
         <details>
           <summary>Why doesn't the camera button open the right screen in Bambu Handy?</summary>
@@ -216,5 +228,14 @@
       <p>Bambu Status Widget is an independent app, not affiliated with or endorsed by Bambu Lab. Bambu Lab and Bambu Handy are trademarks of their owner.</p>
     </div>
   </footer>
+  <script>
+    // A link to a FAQ answer (#lan-mode) opens it
+    function openTarget() {
+      var el = location.hash && document.getElementById(location.hash.slice(1));
+      if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
+    }
+    window.addEventListener('hashchange', openTarget);
+    openTarget();
+  </script>
 </body>
 </html>

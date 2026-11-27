@@ -174,3 +174,40 @@ a.dl { font-weight: 600; color: var(--green); overflow-wrap: anywhere; }
 .garmin-page p.sub { color: var(--dim); margin: 0 0 24px; }
 .btn.garmin { display: inline-flex; align-items: center; gap: 8px; }
 .btn.garmin small { font-size: 11px; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; color: var(--orange); }
+
+/* App screenshots in the setup steps and FAQ */
+img.shot { display: block; width: 100%; max-width: 300px; height: auto; margin: 14px 0 4px; border-radius: 14px; box-shadow: 0 0 0 1px var(--line); }
+.shot-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start; }
+.shot-row img.shot { flex: 1 1 220px; }
+.faq details img.shot { margin: 0 0 14px; }
+
+/* Site search */
+.search-btn { margin-left: 20px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; border: 1px solid #4a4a4a; background: transparent; color: var(--text); font: inherit; font-size: 14px; cursor: pointer; vertical-align: middle; }
+.search-btn:hover { border-color: var(--green); color: var(--green); }
+html.search-lock { overflow: hidden; }
+.search-overlay { position: fixed; inset: 0; z-index: 50; display: none; align-items: flex-start; justify-content: center; padding: 10vh 16px 16px; background: rgba(0,0,0,.6); backdrop-filter: blur(3px); }
+.search-overlay.open { display: flex; }
+.search-box { width: 100%; max-width: 620px; max-height: 80vh; display: flex; flex-direction: column; background: #1c1d1c; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 24px 60px rgba(0,0,0,.5); overflow: hidden; }
+.search-field { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.search-field span { color: var(--green); font-size: 22px; line-height: 1; }
+.search-field input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--text); font: inherit; font-size: 18px; }
+.search-close { border: 1px solid #4a4a4a; background: transparent; color: var(--dim); border-radius: 8px; padding: 3px 8px; font-size: 12px; cursor: pointer; }
+.search-results { overflow-y: auto; padding: 6px; }
+.search-hit { display: block; overflow-wrap: anywhere; padding: 10px 12px; border-radius: 12px; text-decoration: none; color: var(--text); }
+.search-hit.on { background: #262826; box-shadow: inset 3px 0 0 var(--green); }
+.search-kind { display: block; font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; color: var(--green); }
+.search-title { display: block; font-weight: 600; margin: 2px 0; }
+.search-snip { display: block; font-size: 14px; color: var(--dim); }
+.search-hit mark { background: rgba(0,174,66,.25); color: inherit; border-radius: 3px; padding: 0 1px; }
+.search-empty { margin: 0; padding: 16px; color: var(--dim); }
+.search-hint { margin: 0; padding: 10px 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--dim); }
+.search-hint a { color: var(--dim); }
+.search-flash { animation: searchflash 1.6s ease-out; }
+@keyframes searchflash { 0%, 30% { box-shadow: 0 0 0 2px var(--green); } 100% { box-shadow: 0 0 0 2px transparent; } }
+@media (max-width: 760px) { .search-btn { margin-left: 12px; padding: 5px 10px; } }
+@media (max-width: 480px) { .search-btn span { display: none; } .search-overlay { padding-top: 12px; } }
+@media (max-width: 480px) {
+  nav { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; white-space: normal; }
+  nav a, nav a:first-child { margin-left: 0; }
+  .search-btn { margin-left: 0; }
+}

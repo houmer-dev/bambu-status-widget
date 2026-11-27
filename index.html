@@ -18,6 +18,7 @@
         <a href="#faq">FAQ</a>
         <a href="#about">About</a>
         <a href="privacy.html">Privacy</a>
+        <button class="search-btn" type="button" aria-label="Search this site" title="Search (/)"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Search</span></button>
       </nav>
       <div class="support">
         <span>If you like my work, consider supporting me</span>
@@ -70,8 +71,10 @@
       <p class="sub">Pick a rectangle, a circle or a strip in one of seven sizes, right in the settings. With several printers, one widget can show up to six. Pick one of six themes and make the background as transparent as you like.</p>
       <ol class="steps">
         <li>Install the app from <a href="https://play.google.com/store/apps/details?id=app.bambuwidget">Google Play</a> and open it.</li>
-        <li>Sign in with your Bambu Lab account, the same one you use in Bambu Handy. Google, Apple and Facebook accounts work too (<a href="#sign-in">how</a>).</li>
-        <li>Choose a shape and tap <b>Place the widget</b>.</li>
+        <li>Sign in with your Bambu Lab account, the same one you use in Bambu Handy. Google, Apple and Facebook accounts work too (<a href="#sign-in">how</a>).
+          <img class="shot" src="assets/help/setup-signin.png" alt="The sign-in card in the app: account e-mail, password, a switch for the Chinese server and the Sign in button" loading="lazy"></li>
+        <li>Choose a shape and size, then tap <b>Place the widget</b>. The preview at the top shows how it will look.
+          <span class="shot-row"><img class="shot" src="assets/help/setup-shapes.png" alt="The shape list: wide rectangle, small and big circle, three strips and Multiple printers in three sizes" loading="lazy"><img class="shot" src="assets/help/setup-place.png" alt="The settings screen with a live preview of the round widget, the Classic theme and the Place the widget button" loading="lazy"></span></li>
       </ol>
       <p class="note">Tap the widget to refresh it. Tap the camera icon to open Bambu Handy. The live notification is on from the start once you allow notifications; switch it off in the app's settings under <b>Notification</b>.</p>
     </div>
@@ -139,6 +142,7 @@
           <summary>Can I have one widget per printer?</summary>
           <p>Yes. Every widget can show a different printer, so you can put your main printer on one home screen page and another printer on the next. Place a widget, tap the gear on it (or long-press it and choose edit) and tap the printer it should show. Then place a second widget and pick the other printer.</p>
           <p>If you place the widget with <b>Place the widget</b> in the app, it asks which printer right away. To see several printers in one widget, use <b>Multiple printers</b> instead.</p>
+          <img class="shot" src="assets/help/faq-printers.png" alt="The printer list in the widget settings: H2Dbig is ticked, P2Small can be tapped instead" loading="lazy">
         </details>
         <details id="lan-mode">
           <summary>How do I set up LAN mode?</summary>
@@ -149,6 +153,7 @@
             <li>In the app, open <b>Printer IP and access code</b> under <b>Backup – home Wi-Fi</b> and enter the IP address, serial number and access code.</li>
             <li>With your phone on the same Wi-Fi as the printer, tap <b>Save backup and test</b>. When it works, the app shows "Connected" with the printer and its progress.</li>
           </ol>
+          <img class="shot" src="assets/help/faq-lan.png" alt="The home Wi-Fi fields in the app: printer IP address, serial number, access code and the Save backup and test button" loading="lazy">
           <p>Without an account, the widget updates only while your phone is on that Wi-Fi. Tip: give the printer a fixed IP address in your router, so it doesn't change after a restart. If you change the printer's access code, enter the new one and test again.</p>
           <p>The app remembers your printer's certificate and won't send the access code to any other device. If it ever says the certificate changed, check you're on your own Wi-Fi and tap <b>Save backup and test</b> again.</p>
         </details>
@@ -200,14 +205,6 @@
       <p>Bambu Status Widget is an independent app, not affiliated with or endorsed by Bambu Lab. Bambu Lab and Bambu Handy are trademarks of their owner.</p>
     </div>
   </footer>
-  <script>
-    // A link to a FAQ answer (#lan-mode) opens it
-    function openTarget() {
-      var el = location.hash && document.getElementById(location.hash.slice(1));
-      if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
-    }
-    window.addEventListener('hashchange', openTarget);
-    openTarget();
-  </script>
+  <script src="search.js"></script>
 </body>
 </html>

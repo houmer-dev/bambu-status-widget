@@ -42,7 +42,10 @@
       if (sum) add(d, sum.textContent, d.textContent.replace(sum.textContent, ''), 'Question', sectionOf(d));
     });
     doc.querySelectorAll('.steps li').forEach(function (li, i) {
-      var t = clean(li.textContent);
+      // (without list boxes: the watch picker would add 119 model names)
+      var copy = li.cloneNode(true);
+      copy.querySelectorAll('select').forEach(function (x) { x.remove(); });
+      var t = clean(copy.textContent);
       add(li, 'Step ' + (i + 1) + ': ' + t.split(/[.:]/)[0], t, 'Setup', sectionOf(li));
     });
     doc.querySelectorAll('.card').forEach(function (c) {

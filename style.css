@@ -232,3 +232,11 @@ html.search-lock { overflow: hidden; }
   .steps li:has(.shot-row) .shot-row { flex-wrap: wrap; }
   .steps li:has(.shot-row) .shot-row img.shot { flex: 1 1 220px; max-width: 300px; }
 }
+
+/* Garmin watch picker */
+.watch-pick { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 12px 0 6px; }
+.watch-pick select { flex: 1 1 240px; min-width: 0; width: 100%; max-width: 420px; padding: 11px 12px; border-radius: 12px; border: 1px solid #4a4a4a; background: #151615; color: var(--text); font: inherit; font-size: 15px; }
+.watch-pick select:focus { outline: 2px solid var(--green); outline-offset: 1px; }
+.watch-dl { padding: 11px 22px; }
+.watch-dl[aria-disabled="true"] { opacity: .45; pointer-events: none; }
+.watch-note { display: block; font-size: 13px; color: var(--dim); }

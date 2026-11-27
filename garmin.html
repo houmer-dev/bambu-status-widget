@@ -39,12 +39,162 @@
       <h3 class="garmin-install">How to try it</h3>
       <ol class="steps">
         <li>The watch app gets its data from the phone app, so you need the test version of the phone app with Garmin support: <a class="dl" href="assets/garmin/BambuStatusWidget-1.0.11-garmin-alpha.apk" download>BambuStatusWidget-1.0.11-garmin-alpha.apk</a> (Android 12 or newer, 0.6 MB). <b>If you have the app from Google Play, uninstall it first:</b> Android won't install this file over it, and your widgets and settings are reset. Open the downloaded file on your phone and allow installing from this source when asked. Garmin Connect must be on the same phone, paired with your watch.</li>
-        <li>Download the watch app on a computer: <a class="dl" href="assets/garmin/BambuStatus-fr955-alpha.prg" download>BambuStatus-fr955-alpha.prg</a> (Forerunner 955 only, 12 KB).</li>
+        <li>Download the watch app for your model on a computer:
+          <span class="watch-pick">
+            <select id="watch-model" aria-label="Your Garmin watch">
+            <option value="">Choose your watch…</option>
+            <optgroup label="Forerunner">
+            <option value="fr55">Forerunner 55</option>
+            <option value="fr70">Forerunner 70</option>
+            <option value="fr165">Forerunner 165</option>
+            <option value="fr165m">Forerunner 165 Music</option>
+            <option value="fr170">Forerunner 170</option>
+            <option value="fr170m">Forerunner 170 Music</option>
+            <option value="fr245">Forerunner 245</option>
+            <option value="fr245m">Forerunner 245 Music</option>
+            <option value="fr255">Forerunner 255</option>
+            <option value="fr255m">Forerunner 255 Music</option>
+            <option value="fr255s">Forerunner 255s</option>
+            <option value="fr255sm">Forerunner 255s Music</option>
+            <option value="fr265">Forerunner 265</option>
+            <option value="fr265s">Forerunner 265s</option>
+            <option value="fr57042mm">Forerunner 570 42mm</option>
+            <option value="fr57047mm">Forerunner 570 47mm</option>
+            <option value="fr645m">Forerunner 645 Music</option>
+            <option value="fr745">Forerunner 745</option>
+            <option value="fr945">Forerunner 945</option>
+            <option value="fr945lte">Forerunner 945 LTE</option>
+            <option value="fr955">Forerunner 955 / Solar</option>
+            <option value="fr965">Forerunner 965</option>
+            <option value="fr970">Forerunner 970</option>
+            </optgroup>
+            <optgroup label="fēnix">
+            <option value="fenix5plus">fēnix 5 Plus</option>
+            <option value="fenix5splus">fēnix 5S Plus</option>
+            <option value="fenix5xplus">fēnix 5X Plus</option>
+            <option value="fenix6">fēnix 6 / 6 Solar / 6 Dual Power</option>
+            <option value="fenix6pro">fēnix 6 Pro / 6 Sapphire / 6 Pro Solar / 6 Pro Dual Power / quatix 6</option>
+            <option value="fenix6s">fēnix 6S / 6S Solar / 6S Dual Power</option>
+            <option value="fenix6spro">fēnix 6S Pro / 6S Sapphire / 6S Pro Solar / 6S Pro Dual Power</option>
+            <option value="fenix6xpro">fēnix 6X Pro / 6X Sapphire / 6X Pro Solar / tactix Delta Sapphire / Delta Solar / Delta Solar - Ballistics Edition / quatix 6X / 6X Solar / 6X Dual Power</option>
+            <option value="fenix7">fēnix 7 / quatix 7</option>
+            <option value="fenix7pro">fēnix 7 Pro</option>
+            <option value="fenix7pronowifi">fēnix 7 Pro - Solar Edition (no Wi-Fi)</option>
+            <option value="fenix7s">fēnix 7S</option>
+            <option value="fenix7spro">fēnix 7S Pro</option>
+            <option value="fenix7x">fēnix 7X / tactix 7 / quatix 7X Solar / Enduro 2</option>
+            <option value="fenix7xpro">fēnix 7X Pro</option>
+            <option value="fenix7xpronowifi">fēnix 7X Pro - Solar Edition (no Wi-Fi)</option>
+            <option value="fenix843mm">fēnix 8 43mm</option>
+            <option value="fenix847mm">fēnix 8 47mm / 51mm / tactix 8 47mm / 51mm / quatix 8 47mm / 51mm</option>
+            <option value="fenix8pro47mm">fēnix 8 Pro 47mm / 51mm / MicroLED / quatix 8 Pro 47mm / 51mm</option>
+            <option value="fenix8solar47mm">fēnix 8 Solar 47mm</option>
+            <option value="fenix8solar51mm">fēnix 8 Solar 51mm / tactix 8 Solar 51mm</option>
+            <option value="fenix943mm">fēnix 9 43mm</option>
+            <option value="fenix947mm">fēnix 9 47mm / 51mm</option>
+            <option value="fenix9pro43mm">fēnix 9 Pro 43mm</option>
+            <option value="fenix9pro47mm">fēnix 9 Pro 47mm</option>
+            <option value="fenix9pro51mm">fēnix 9 Pro 51mm</option>
+            <option value="fenix9prosolar47mm">fēnix 9 Pro Solar 47mm</option>
+            <option value="fenix9prosolar51mm">fēnix 9 Pro Solar 51mm</option>
+            <option value="fenixe">fēnix E</option>
+            </optgroup>
+            <optgroup label="epix">
+            <option value="epix2">epix (Gen 2) / quatix 7 Sapphire</option>
+            <option value="epix2pro42mm">epix Pro (Gen 2) 42mm</option>
+            <option value="epix2pro47mm">epix Pro (Gen 2) 47mm / quatix 7 Pro</option>
+            <option value="epix2pro51mm">epix Pro (Gen 2) 51mm / D2 Mach 1 Pro / tactix 7 – AMOLED Edition</option>
+            </optgroup>
+            <optgroup label="Enduro">
+            <option value="enduro">Enduro</option>
+            <option value="enduro3">Enduro 3</option>
+            <option value="enduro4">Enduro 4</option>
+            </optgroup>
+            <optgroup label="Instinct">
+            <option value="instinct2">Instinct 2 / Solar / Dual Power / dēzl Edition</option>
+            <option value="instinct2s">Instinct 2S / Solar / Dual Power</option>
+            <option value="instinct2x">Instinct 2X Solar</option>
+            <option value="instinct3amoled45mm">Instinct 3 AMOLED 45mm</option>
+            <option value="instinct3amoled50mm">Instinct 3 AMOLED 50mm</option>
+            <option value="instinct3solar45mm">Instinct 3 Solar / Solar Tactical 45mm / 50mm</option>
+            <option value="instinctcrossover">Instinct Crossover</option>
+            <option value="instinctcrossoveramoled">Instinct Crossover AMOLED</option>
+            <option value="instincte40mm">Instinct E 40mm</option>
+            <option value="instincte45mm">Instinct E 45mm</option>
+            </optgroup>
+            <optgroup label="Venu">
+            <option value="venu">Venu</option>
+            <option value="venu2">Venu 2</option>
+            <option value="venu2plus">Venu 2 Plus</option>
+            <option value="venu2s">Venu 2S</option>
+            <option value="venu3">Venu 3</option>
+            <option value="venu3s">Venu 3S</option>
+            <option value="venu441mm">Venu 4 41mm</option>
+            <option value="venu445mm">Venu 4 45mm / D2 Air X15</option>
+            <option value="venud">Venu Mercedes-Benz Collection</option>
+            <option value="venusq">Venu Sq</option>
+            <option value="venusq2">Venu Sq 2</option>
+            <option value="venusq2m">Venu Sq 2 Music</option>
+            <option value="venusqm">Venu Sq. Music Edition</option>
+            <option value="venux1">Venu X1</option>
+            </optgroup>
+            <optgroup label="vívoactive">
+            <option value="vivoactive3m">vívoactive 3 Music</option>
+            <option value="vivoactive4">vívoactive 4</option>
+            <option value="vivoactive4s">vívoactive 4S</option>
+            <option value="vivoactive5">vívoactive 5</option>
+            <option value="vivoactive6">vívoactive 6</option>
+            </optgroup>
+            <optgroup label="MARQ">
+            <option value="marq2">MARQ (Gen 2) Athlete / Adventurer / Captain / Golfer / Carbon Edition / Commander - Carbon Edition</option>
+            <option value="marq2aviator">MARQ (Gen 2) Aviator</option>
+            <option value="marq3">MARQ (Gen 3) Athlete / Adventurer / Aviator / Commander / Golfer / Diver</option>
+            <option value="marqadventurer">MARQ Adventurer</option>
+            <option value="marqathlete">MARQ Athlete</option>
+            <option value="marqaviator">MARQ Aviator</option>
+            <option value="marqcaptain">MARQ Captain / MARQ Captain: American Magic Edition</option>
+            <option value="marqcommander">MARQ Commander</option>
+            <option value="marqdriver">MARQ Driver</option>
+            <option value="marqexpedition">MARQ Expedition</option>
+            <option value="marqgolfer">MARQ Golfer</option>
+            </optgroup>
+            <optgroup label="Descent">
+            <option value="descentg1">Descent G1 / G1 Solar</option>
+            <option value="descentg2">Descent G2</option>
+            <option value="descentmk2">Descent Mk2 / Mk2i</option>
+            <option value="descentmk2s">Descent Mk2 S</option>
+            <option value="descentmk343mm">Descent Mk3 43mm / Mk3i 43mm</option>
+            <option value="descentmk351mm">Descent Mk3i 51mm</option>
+            </optgroup>
+            <optgroup label="D2">
+            <option value="d2air">D2 Air</option>
+            <option value="d2airx10">D2 Air X10</option>
+            <option value="d2mach1">D2 Mach 1</option>
+            <option value="d2mach2">D2 Mach 2</option>
+            <option value="d2mach2pro">D2 Mach 2 Pro</option>
+            </optgroup>
+            <optgroup label="Approach">
+            <option value="approachs50">Approach S50</option>
+            <option value="approachs7042mm">Approach S70 42mm</option>
+            <option value="approachs7047mm">Approach S70 47mm</option>
+            <option value="approachs7243mm">Approach S72 43mm</option>
+            <option value="approachs7247mm">Approach S72 47mm</option>
+            </optgroup>
+            <optgroup label="Other">
+            <option value="legacyherocaptainmarvel">Captain Marvel</option>
+            <option value="legacysagadarthvader">Darth Vader</option>
+            <option value="legacyherofirstavenger">First Avenger</option>
+            <option value="legacysagarey">Rey</option>
+            </optgroup>
+            </select>
+            <a class="btn watch-dl" id="watch-dl" aria-disabled="true">Download</a>
+          </span>
+          <span class="watch-note">119 models, about 15 KB each. Your model isn't listed? Write to me.</span></li>
         <li>Connect the watch to the computer with its charging cable and copy the file into the <b>GARMIN\Apps</b> folder on the watch. On a Mac you need a tool like OpenMTP to see the watch. Then unplug it.</li>
         <li>On the watch, open the glances, scroll to the end, choose <b>Edit</b>, then <b>Add</b> and <b>Bambu Status</b>.</li>
         <li>Open Bambu Status Widget on your phone once. Within a minute your printer appears on the watch. Press Start on the glance for the full screen.</li>
       </ol>
-      <p class="note">To go back, delete the watch app from GARMIN\Apps, uninstall the test version and install the app from Google Play again. The test version doesn't update itself: check this page for new versions. Another Garmin watch? Write to me, more models will follow.</p>
+      <p class="note">To go back, delete the watch app from GARMIN\Apps, uninstall the test version and install the app from Google Play again. The test version doesn't update itself: check this page for new versions. So far the watch app has run on a real Forerunner 955; the other models are checked in Garmin's simulator only, so tell me how it looks on yours.</p>
       <div class="feedback">
         <span>Feedback, bugs or a photo of it on your wrist:</span>
         <a href="mailto:houmer.dev@gmail.com?subject=Garmin%20Companion%20alpha">houmer.dev@gmail.com</a>
@@ -58,6 +208,18 @@
       <p>Bambu Status Widget is an independent app, not affiliated with or endorsed by Bambu Lab.</p>
     </div>
   </footer>
+  <script>
+    // Watch picker: the button downloads the file for the chosen model
+    (function () {
+      var sel = document.getElementById('watch-model'), dl = document.getElementById('watch-dl');
+      function update() {
+        var id = sel.value;
+        if (id) { dl.href = 'assets/garmin/watch/' + id + '.prg'; dl.setAttribute('download', 'BambuStatus-' + id + '.prg'); dl.removeAttribute('aria-disabled'); }
+        else { dl.removeAttribute('href'); dl.setAttribute('aria-disabled', 'true'); }
+      }
+      sel.addEventListener('change', update); update();
+    })();
+  </script>
   <script src="search.js"></script>
 </body>
 </html>

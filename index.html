@@ -14,6 +14,7 @@
       <a class="brand" href="#"><img src="assets/icon.png" alt="">Bambu Status Widget</a>
       <nav>
         <a href="#features">Features</a>
+        <a href="#sign-in">Signing in</a>
         <a href="#faq">FAQ</a>
         <a href="#about">About</a>
         <a href="privacy.html">Privacy</a>
@@ -68,10 +69,60 @@
       <p class="sub">Pick a rectangle, a circle or a strip in one of seven sizes, right in the settings. With several printers, one widget can show up to six. Pick one of six themes and make the background as transparent as you like.</p>
       <ol class="steps">
         <li>Install the app from <a href="https://play.google.com/store/apps/details?id=app.bambuwidget">Google Play</a> and open it.</li>
-        <li>Sign in with your Bambu Lab account, the same one you use in Bambu Handy. Google and Apple accounts work too.</li>
+        <li>Sign in with your Bambu Lab account, the same one you use in Bambu Handy. Google, Apple and Facebook accounts work too (<a href="#sign-in">how</a>).</li>
         <li>Choose a shape and tap <b>Place the widget</b>.</li>
       </ol>
       <p class="note">Tap the widget to refresh it. Tap the camera icon to open Bambu Handy. The live notification is on from the start once you allow notifications; switch it off in the app's settings under <b>Notification</b>.</p>
+    </div>
+  </section>
+
+  <section id="sign-in">
+    <div class="wrap">
+      <h2>Signing in</h2>
+      <p class="sub">The app signs in to your Bambu Lab account, the same one you use in Bambu Handy. Your password goes only to Bambu Lab and is never stored.</p>
+      <div class="faq">
+        <details>
+          <summary>Which ways of signing in work?</summary>
+          <p>All Bambu Lab accounts work:</p>
+          <ul>
+            <li>an account with an e-mail and password,</li>
+            <li>an account made with Google, Apple or Facebook (you sign in with a code sent by e-mail),</li>
+            <li>an account on the Chinese server (bambulab.cn).</li>
+          </ul>
+          <p>You can also skip the account and connect straight to your printer over your home Wi-Fi.</p>
+        </details>
+        <details>
+          <summary>How do I sign in with my e-mail and password?</summary>
+          <p>Enter your account e-mail and password and tap <b>Sign in</b>. Sometimes Bambu Lab also sends a verification code to your e-mail. Enter it in the field that appears and tap <b>Sign in</b> again.</p>
+        </details>
+        <details>
+          <summary>I signed up with Google, Apple or Facebook. How do I sign in?</summary>
+          <p>Enter the e-mail of your Bambu Lab account and leave the password empty. Tap <b>Sign in</b> and Bambu Lab sends a code to that e-mail. Enter the code and tap <b>Sign in</b> again. No code? Check your spam folder or tap <b>Resend code</b>.</p>
+          <p>If you used Apple's <i>Hide My Email</i>, your account e-mail is the one ending in privaterelay.appleid.com. The code still arrives in your normal inbox.</p>
+        </details>
+        <details>
+          <summary>The app says Bambu Lab wants to check that I'm not a robot</summary>
+          <p>Bambu Lab sometimes asks for this check after several sign-ins, and only their own page can show it. Tap <b>Sign in on Bambu Lab's page</b> and sign in there; it brings you back to the app when you're done. The check usually stops by itself after a few hours, too.</p>
+          <p>The Google, Apple and Facebook buttons don't work on that page inside an app. If your account was made with one of them, open <a href="https://bambulab.com">bambulab.com</a> in your browser, sign in the usual way and set a password in your account settings. Then sign in on Bambu Lab's page with your e-mail and that password.</p>
+        </details>
+        <details>
+          <summary>My account is on the Chinese server</summary>
+          <p>Tick <b>Account on the Chinese server (bambulab.cn)</b> before you tap <b>Sign in</b>.</p>
+        </details>
+        <details>
+          <summary>I use two-step verification with an authenticator app</summary>
+          <p>The app doesn't support authenticator codes yet. Until it does, you can connect over your home Wi-Fi instead (see below).</p>
+        </details>
+        <details>
+          <summary>Can I use it without signing in to Bambu Lab?</summary>
+          <p>Yes. Open <b>Printer IP and access code</b> in the app and enter your printer's IP address, serial number and access code. You'll find the IP and access code on the printer under <b>Settings → WLAN</b>. Then tap <b>Save backup and test</b>.</p>
+          <p>The widget then updates only when your phone is on the same Wi-Fi as the printer. If you're signed in too, this is a backup for when the cloud can't be reached.</p>
+        </details>
+        <details>
+          <summary>How long do I stay signed in?</summary>
+          <p>About three months. When Bambu Lab's sign-in runs out, the app asks you to sign in again. The sign-in token stays encrypted on your phone, and <b>Sign out</b> removes it together with your printer details.</p>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -95,10 +146,6 @@
           <summary>Is the widget free?</summary>
           <p>Yes, and it will stay free. If you like it, please consider supporting further development.</p>
           <p><a class="coffee" href="https://ko-fi.com/houmer" title="Ko-fi: pay by card or PayPal, no account needed">☕ Buy me a coffee</a></p>
-        </details>
-        <details>
-          <summary>Can I use it without signing in to Bambu Lab?</summary>
-          <p>Yes. You can connect directly to your printer over your home Wi-Fi. The widget then updates only when your phone is on that Wi-Fi.</p>
         </details>
         <details>
           <summary>Does it work with other 3D printer brands?</summary>
